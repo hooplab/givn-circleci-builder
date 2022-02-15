@@ -2,7 +2,7 @@ FROM hexpm/elixir:1.13.0-erlang-24.1.7-debian-bullseye-20210902-slim
 
 # install build dependencies
 RUN apt-get update -y \
-  && apt-get -y install curl build-essential ca-certificates git locales bash unzip
+  && apt-get -y install curl build-essential ca-certificates git locales bash unzip libxss1
 
 # Set the locale
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
