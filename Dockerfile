@@ -25,8 +25,7 @@ RUN apt-get clean && rm -f /var/lib/apt/lists/*_*
 # install rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > /tmp/rustup.sh \
   && sh /tmp/rustup.sh -y \
-  && rm /tmp/rustup.sh \
-  && source $HOME/.cargo/env
+  && rm /tmp/rustup.sh
 
 # install hex + rebar
 RUN mix local.hex --force && \
