@@ -30,5 +30,3 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > /tmp/rustup.sh \
 # install hex + rebar
 RUN mix local.hex --force && \
     mix local.rebar --force
-
-CMD bash
