@@ -27,9 +27,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
 RUN apt-get install -y chromium-driver
 
 # install rust
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > /tmp/rustup.sh \
-  && sh /tmp/rustup.sh -y \
-  && rm /tmp/rustup.sh
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y
 
 # install hex + rebar
 RUN mix local.hex --force && \
